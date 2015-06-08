@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type"content="text/html;" charset="UTF-8">
+	<link href="{% static 'css/stylesheet.css' %}" rel="stylesheet">
+</head>
+<body>
+	<form action="/nuevoUSuario/"method="GET" class="contenedor">
+		Nombre:				<input type="text" name="nombre" required><br/>
+		Apellido:			<input type="text" name="apellido" required><br/>
+		Usuario: 			<input type="text" name="user" required><br/>
+		Contraseña:		 	<input type="password" name="pass1" required><br/>
+		Repetir Contraseña: <input type="password" name="pass2" required><br/>
+		Fecha de Nacimiento:<input name="fechaNacimiento" type="date" min="1900-01-01" max="2010-12-31" required><br/>
+		Email: 				<input type="email" name="eMail" required><br/>
+		Provincia:			<select name="provincia">
+								<option value="corrientes">Corrientes</option>
+								<option value="chaco">Chaco</option>
+								<option value="misiones">Misiones</option>
+								<option value="formosa">Formosa</option>
+							</select><br/>
+	</form>
+	<input type="submit" value="Crear Usuario">
+</body>	
+</html>

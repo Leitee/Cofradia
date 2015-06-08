@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="es">
+	<head>
+		<title>Bienvenido a Cofradia! - Iniciar Sesion</title>
+		<meta http-equiv="Content-Type"content="text/html;" charset="UTF-8">
+		<link href="{% static 'css/stylesheet.css' %}" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div class="contenedor">
+			<img src="{% static 'img/cofradia.png' %}" />
+			<center>
+				<form action="/buscarUsuario/" method="GET">
+					<h2>Usuario:</h2> <input type="text" name="user">
+					<br/>
+					<h2>Contraseña:</h2> <input type="password" name="password">
+					<br/><br/>
+					<input type="submit" value="Iniciar Sesión"><br/>
+				</form>
+			</center>
+			<a href="/crearUsuario/">No tiene una cuenta? Create una una</a>
+		</div>
+	</body>
+</html>
