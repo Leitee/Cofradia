@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'cofradia.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cofradiadb',
+        'NAME': 'cofradia',
         'USER':'root',
         'PASSWORD':'toor',
         'HOST':'',
