@@ -8,3 +8,17 @@ class Usuario(models.Model):
 
 	def __unicode__(self):
 		return self.nombre
+
+class Categoria(models.Model):
+	nombre = models.CharField(max_length = 30)
+
+class SubCategoria(models.Model):
+	nombre = models.CharField(max_length = 30)
+	categoria = models.ForeignKey(Categoria)	
+
+class Objeto(models.Model):
+	nombre = models.CharField(max_length = 30)
+	descripcion = models.CharField(max_length = 255)
+	subcategoria = models.ForeignKey(SubCategoria)
+	usuario = models.ForeignKey(Usuario)
+

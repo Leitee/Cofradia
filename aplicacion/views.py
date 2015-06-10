@@ -17,6 +17,10 @@ def buscarUsuario(request):
 def crearUsuario(request):
 	return render(request,'crearUsuario.html')
 
-def nuevoUSuario(requiest):
-	nuevoUser = Usuario(nombre=request.GET['nombre'],apellido=request.GET['apellido'],user=request.GET['user'],pas=request.GET['pas'])
+def nuevoUSuario(request):
+	nuevoUser = Usuario(nombre=request.GET['nombre'],
+		apellido=request.GET['apellido'],user=request.GET['user'],pas=request.GET['pas'])
 	nuevoUser.save()
+
+def mostrarObjeto(request):
+	return render(request,'mostrarObjeto.html')
