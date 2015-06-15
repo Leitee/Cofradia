@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cofradiadb',
         'USER':'root',
-        'PASSWORD':'toor',
+        'PASSWORD':'andres123.',
         'HOST':'',
     }
 }
