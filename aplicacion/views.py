@@ -18,9 +18,9 @@ def crearUsuario(request):
 	return render(request,'crearUsuario.html')
 
 def nuevoUSuario(request):
-	nuevoUser = Usuario(nombre=request.GET['nombre'],
-		apellido=request.GET['apellido'],user=request.GET['user'],pas=request.GET['pas'])
+	nuevoUser = Usuario(nombre=request.GET['nombre'],apellido=request.GET['apellido'],user=request.GET['user'],pas=request.GET['pass1'],fNacimiento = request.GET['fechaNacimiento'],sexo= request.GET['sex'],email= request.GET['eMail'],telefono= request.GET['unTel'])
 	nuevoUser.save()
+	return HttpResponse('Usuario creado exitosamente')
 
-def mostrarObjeto(request):
-	return render(request,'mostrarObjeto.html')
+def mostrarPubli(request):
+	return render(request,'mostrarPubli.html')
