@@ -22,5 +22,5 @@ def nuevoUSuario(request):
 		apellido=request.GET['apellido'],user=request.GET['user'],pas=request.GET['pas'])
 	nuevoUser.save()
 
-def mostrarObjeto(request):
-	return render(request,'mostrarObjeto.html')
+def mostrarPubli(request):
+	return render(request,'mostrarPubli.html')

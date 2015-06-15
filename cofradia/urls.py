@@ -14,11 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
-from aplicacion.views import mostrarObjeto, iniciarSesion, buscarUsuario, crearUsuario
+from aplicacion.views import *
 
 urlpatterns = [
-	url(r'^iniciarSesion/',iniciarSesion),
-	url(r'^buscarUsuario/',buscarUsuario),
-	url(r'^crearUsuario/',crearUsuario),
-    url(r'^mostrarObjeto/',mostrarObjeto),
+	url(r'^iniciarSesion/', iniciarSesion),
+	url(r'^buscarUsuario/', buscarUsuario),
+	url(r'^crearUsuario/', crearUsuario),
+    url(r'^mostrarPubli/', mostrarPubli),
 ]
