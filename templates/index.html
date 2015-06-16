@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+	<title>Bievenidos a Cofradia</title>
+	<meta http-equiv="Content-Type" content="text/html;" charset="UTF-8" />
+
+<style type="text/css">
+	
+	body{background-color: lavender;margin-top: 0px;margin-left: 0px;margin-right: 0px;}
+	h3{margin-top: 23px;margin-bottom: 5px;}
+	.footer {width:100%;height:35px;background-color:#C6C9D0;position:fixed;bottom:0px;}
+	#Encabezado{padding-bottom: 90px;;box-shadow: 0px 4px 7px #999;background-color: #C6C9D0;margin-left: auto;}
+	#logo{float:left;margin-top:3px; margin-bottom: 12px;  margin-top: 12px;margin-left: 12px;height: 68px;}
+	#search{float:right; margin-top: 0px;margin-right: 100px;}	
+	#titulocategory{float:right;float: right;margin-right: 85px;margin-top: 40px;}
+	#text{font-family: cursive;font-face:verdana;float: right;margin-right: 25px;margin-top: 9px;}
+	#Publicaciones{float: left;  margin-top: 80px;margin-left: 17px;}
+	#Publicaciones1{float: left; margin-top: 60px}
+	#fbc{float: right;margin-top: 317px;margin-right: 57px;}
+</style>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+
+
+<body>
+
+
+<!--encabezado-->
+<div id="Encabezado">
+		<!--Logo -->
+		<div >
+
+			<a href="index.html"><img id="logo" src="{% static 'img/cofradia.png' %}"></a>
+		</div>
+		<!-- Login y registro-->
+		<div>
+			<p id="titulocategory"> <a href="/iniciarSesion/">Iniciar Sesión</a> |<a href="/crearUsuario/">Registrarse</a> </p>
+		</div>
+		<!-- Busqueda -->
+		<div id="search">
+			<h3>Categorias</h3>
+				<select>
+				  <option value="volvo">Categorias</option>
+				  <option value="saab">Trabajo</option>
+				  <option value="opel">Deporte</option>
+				  <option value="audi">Estudio</option>
+				</select>
+		</div>
+</div>
+
+<!-- Publicaciones -->
+
+<div >
+<center > 
+	<div >
+
+		<img src="{% static 'img/ultima.png' %}" style="height: 266px;" id="Publicaciones1">
+
+	</div>
+	<div id="Publicaciones">
+		<center><h4>Deporte</h4></center>
+		<table width="220" border="0" cellspacing="0" cellpadding="1"> 
+			<tr bgcolor="#C6C9D0" align="center"> 
+				<td><b><font color="#242424">Titular del cuadro</font></b></td> 
+			</tr> 
+			<tr bgcolor="#C6C9D0"> 
+				<td> 
+		<table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+			<tr bgcolor="#FFFFFF"> 
+				<td>acá iría lo que es la descripcion del evento <br><i>ver más...</i></td> 
+			</tr> 
+		</table> 
+			</td> 
+				</tr> 
+		</table> 
+	</div>
+	<div id="Publicaciones">
+		<center><h4>Trabajo</h4></center>
+		<table width="220" border="0" cellspacing="0" cellpadding="1"> 
+			<tr bgcolor="#C6C9D0" align="center"> 
+				<td><b><font color="#242424">Titular del cuadro</font></b></td> 
+			</tr> 
+			<tr bgcolor="#C6C9D0"> 
+				<td> 
+		<table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+			<tr bgcolor="#FFFFFF"> 
+				<td>acá iría lo que es la descripcion del evento <br><i>ver más...</i></td> 
+			</tr> 
+		</table> 
+			</td> 
+				</tr> 
+		</table> 
+	</div>
+	<div id="Publicaciones">
+		<center><h4>Estudio</h4></center>
+		<table width="220" border="0" cellspacing="0" cellpadding="1"> 
+			<tr bgcolor="#C6C9D0" align="center"> 
+				<td><b><font color="#242424">Titular del cuadro</font></b></td> 
+			</tr> 
+			<tr bgcolor="#C6C9D0"> 
+				<td> 
+		<table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+			<tr bgcolor="#FFFFFF"> 
+				<td>acá iría lo que es la descripcion del evento <br><i>ver más...</i></td> 
+			</tr> 
+		</table> 
+			</td> 
+				</tr> 
+		</table> 
+	</div>
+</center>
+</div>
+
+<!-- Facebook 
+<div class="fb-page" data-href="https://www.facebook.com/pandorahardsoft" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pandorahardsoft"><a href="https://www.facebook.com/pandorahardsoft">Pandora - Hard &amp; Soft</a></blockquote></div></div>
+-->
+<!-- Pie -->
+<div class="footer">
+	
+	<footer>
+	<center>
+		<p>Copyright © <a href="https://www.facebook.com/pandorahardsoft">Pandora</a> - Términos y condiciones | Ayuda | Contactanos</p>
+	</center>
+	</footer>
+	
+</div>
+
+
+</body>
+
+</html>

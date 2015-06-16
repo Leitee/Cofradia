@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html lang="es">
 	<head>
-		<title>Bienvenido a Cofradia! - Iniciar Sesion</title>
+		<title>Iniciar Sesión</title>
 		<meta http-equiv="Content-Type"content="text/html;" charset="UTF-8">
 		<!-- hace la app device responsive -->
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -20,25 +20,25 @@
 			<center>
 				<form action="/buscarUsuario/" method="GET">
 					<h2>Usuario:</h2> 
+					{% if userValido %} 
+            		<p style="color:red;">Usuario Incorrecto</p> 
+        			{% endif %}  
 					<input type="text" name="user">
 					<br/>
 					<h2>Contraseña:</h2> 
+					{% if pasValido %} 
+            		<p style="color:red;">Contraseña Incorrecto</p> 
+        			{% endif %}  					
 					<input type="password" name="password">
 					<br/><br/>
-					<input type="submit" onclick="myFunction()" value="Iniciar Sesión"><br/>
+					<input type="submit" value="Iniciar Sesión"><br/>
 				</form>
 			</center>
 			<br/><br/>
-			<a href="/crearUsuario/">No tiene una cuenta? Create una una ahora.</a>
+			No tiene una cuenta? <a href="/crearUsuario/">Create una ahora.</a>
 		</div>
-		<script>
-			function myFunction() 
-			{
-				alert("Campos vacios");
-			}
-		</script>
+
 		<!-- ultimas versiones de jscript y bootstrap -->
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</body>
-</html>

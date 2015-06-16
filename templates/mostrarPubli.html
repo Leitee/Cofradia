@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+	<title>Publicaciones</title>
+	<meta http-equiv="Content-Type" content="text/html;" charset="UTF-8" />
+	<link rel="shortcut icon" href="{% static 'img/cofradia.ico' %}"/>
+
+<style type="text/css">
+	body{margin-top: 0px;margin-left: 0px;margin-right: 0px;}
+	h3{margin-top: 23px;margin-bottom: 5px;}
+	#Encabezado{box-shadow: 0px 4px 7px #999;background-color: #C6C9D0;margin-left: auto;}
+	#logo{margin-top:3px; margin-bottom: 12px;  margin-top: 12px;margin-left: 12px;height: 68px;}
+	#search{float:right; margin-top: 0px;margin-right: 100px;}	
+	#titulocategory{float:left;}
+	.two {margin-bottom: 15px;margin-right: 50px;margin-left: 50px;}
+	.tituloDescription{margin-bottom: 10px;padding-bottom: 5px;padding-top: 5px;background-color: #EDEDED;margin-top: 10px;font-style: oblique;}
+	.tituloCategoria{margin-top: 21px;}
+</style>
+
+</head>
+
+<body>
+<!--encabezado-->
+<div id="Encabezado">
+	<div >
+	<a href="mostrarPubli.html"><img id="logo" src="{% static 'img/cofradia.png' %}"></a>
+		<div id="search">
+		<h3>Categorias</h3>
+			<select>
+			  <option value="cat">Categorias</option>
+			  <option value="trab">Trabajo</option>
+			  <option value="dep">Deporte</option>
+			  <option value="estu">Estudio</option>
+			</select>
+		</div>
+	</div>
+</div>
+<!-- Login y registro-->
+<div>
+	<div id="tituloCategoria"><center><h1 style="font-family: sans-serif;">TIPO DE CATEGORIA</h1></center></div>
+	
+ 	<form action="/search/" method="get">
+ 	
+        <ul>
+        	{% for publi in result %}
+        	<div class="two">
+        		<center><h1 class="tituloDescription">{{ publi.nombre|escape }}</h1></center>
+        		{{ publi.descripcion|escape }}
+      		</div>
+      		{% endfor %}
+    	</ul>
+
+    </form>
+	
+</div>
+
+</body>
+
+</html>
