@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from models import Usuario
+from models import Usuario, Publicacion, Categoria
+import datetime
 
 def iniciarSesion(request):
 	return render(request,'iniciarSesion.html')
@@ -17,10 +18,13 @@ def buscarUsuario(request):
 def crearUsuario(request):
 	return render(request,'crearUsuario.html')
 
-def nuevoUSuario(request):
-	nuevoUser = Usuario(nombre=request.GET['nombre'],
-		apellido=request.GET['apellido'],user=request.GET['user'],pas=request.GET['pas'])
+def nuevoUsuario(request):
+	nuevoUser = Usuario(nombre=request.GET['nombre'],apellido=request.GET['apellido'],user=request.GET['user'],pas=request.GET['pass1'],fNacimiento = request.GET['fechaNacimiento'],sexo= request.GET['sex'],email= request.GET['eMail'],telefono= request.GET['unTel'])
 	nuevoUser.save()
+	return HttpResponse('Usuario creado exitosamente')
+
+#def nuevaPubli(request):
+	#nuevaPubli = Publicacion(nombre=request.GET['nombre'],fechaInicio=datetime.datetime.now(),Categoria(nombre= request.GET['nombreUsu'], descripcion= request.GET['descripCat'], descripcion= request.GET['descripcion']))
 
 def mostrarPubli(request):
 	return render(request,'mostrarPubli.html')
