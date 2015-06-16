@@ -15,6 +15,9 @@
 	#logo{margin-top:3px; margin-bottom: 12px;  margin-top: 12px;margin-left: 12px;height: 68px;}
 	#search{float:right; margin-top: 0px;margin-right: 100px;}	
 	#titulocategory{float:left;}
+	.two {margin-bottom: 15px;margin-right: 50px;margin-left: 50px;}
+	.tituloDescription{margin-bottom: 10px;padding-bottom: 5px;padding-top: 5px;background-color: #EDEDED;margin-top: 10px;font-style: oblique;}
+	.tituloCategoria{margin-top: 21px;}
 </style>
 
 </head>
@@ -37,7 +40,21 @@
 </div>
 <!-- Login y registro-->
 <div>
+	<div id="tituloCategoria"><center><h1 style="font-family: sans-serif;">TIPO DE CATEGORIA</h1></center></div>
+	
+ 	<form action="/search/" method="get">
+ 	
+        <ul>
+        	{% for publi in result %}
+        	<div class="two">
+        		<center><h1 class="tituloDescription">{{ publi.nombre|escape }}</h1></center>
+        		{{ publi.descripcion|escape }}
+      		</div>
+      		{% endfor %}
+    	</ul>
 
+    </form>
+	
 </div>
 
 </body>

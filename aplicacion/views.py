@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from models import Usuario, Publicacion, Categoria
 import datetime
 
+def index(request):
+	return render(request,'index.html')
+
 def iniciarSesion(request):
 	return render(request,'iniciarSesion.html')
 
@@ -27,4 +30,6 @@ def nuevoUsuario(request):
 	#nuevaPubli = Publicacion(nombre=request.GET['nombre'],fechaInicio=datetime.datetime.now(),Categoria(nombre= request.GET['nombreUsu'], descripcion= request.GET['descripCat'], descripcion= request.GET['descripcion']))
 
 def mostrarPubli(request):
-	return render(request,'mostrarPubli.html')
+	result = Publicacion.objects.distinct()
+		
+	return render(request,'mostrarPubli.html',{"result":result})

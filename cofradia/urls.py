@@ -18,7 +18,8 @@ from aplicacion.views import *
 
 
 urlpatterns = [
-	url(r'^$',iniciarSesion),
+	url(r'^$',index),
+    url(r'^iniciarSesion/',iniciarSesion),
 	url(r'^buscarUsuario/',buscarUsuario),
 	url(r'^crearUsuario/',crearUsuario),
     url(r'^mostrarPubli/',mostrarPubli),
