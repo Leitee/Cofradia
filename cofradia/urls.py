@@ -16,12 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from aplicacion.views import *
 
-
 urlpatterns = [
-	url(r'^$',index),
-    url(r'^iniciarSesion/',iniciarSesion),
+    url(r'^$',index),
+	url(r'^iniciarSesion/',iniciarSesion),
 	url(r'^buscarUsuario/',buscarUsuario),
 	url(r'^crearUsuario/',crearUsuario),
     url(r'^mostrarPubli/',mostrarPubli),
-    url(r'^nuevoUSuario/',nuevoUsuario),
+    url(r'^nuevoUSuario/',nuevoUSuario),
+    url(r'^verPerfil/',verPerfil),
 ]

@@ -18,11 +18,17 @@
 		<div class="contenedor">
 			<img src="{% static 'img/cofradia.png' %}" />
 			<center>
-				<form action="/buscarUsuario/" method="GET">
+				<form action="/buscarUsuario/" method="POST">{% csrf_token %}
 					<h2>Usuario:</h2> 
+					{% if userValido %} 
+            		<p style="color:red;">Usuario Incorrecto</p> 
+        			{% endif %}  
 					<input type="text" name="user">
 					<br/>
 					<h2>Contraseña:</h2> 
+					{% if pasValido %} 
+            		<p style="color:red;">Contraseña Incorrecto</p> 
+        			{% endif %}  					
 					<input type="password" name="password">
 					<br/><br/>
 					<input type="submit" value="Iniciar Sesión"><br/>
@@ -31,8 +37,8 @@
 			<br/><br/>
 			No tiene una cuenta? <a href="/crearUsuario/">Create una ahora.</a>
 		</div>
+
 		<!-- ultimas versiones de jscript y bootstrap -->
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</body>
-</html>

@@ -52,7 +52,7 @@ class Migration(migrations.Migration):
                 ('user', models.CharField(max_length=20, unique=True)),
                 ('pas', models.CharField(max_length=15)),
                 ('fNacimiento', models.DateField()),
-                ('sexo', models.CharField(max_length=10)),
+                ('sexo', models.BooleanField()),
                 ('email', models.EmailField(max_length=75)),
                 ('telefono', models.CharField(max_length=20)),
             ],

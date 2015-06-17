@@ -43,15 +43,17 @@
 		</div>
 		<!-- Login y registro-->
 		<div>
-			<p id="titulocategory"> 
-				{% if logueado %}
-					{%for elemento in result%}
-					<a href="/verPerfil/">{{elemento.user}}</a> |<a href="/">Cerrar Sesión</a>
-					{%endfor%}
-				{%else%}
-					<a href="/iniciarSesion/">Iniciar Sesión</a> |<a href="/crearUsuario/">Registrarse</a>
-				{%endif%}
-			 </p>
+			<p id="titulocategory"> <a href="/iniciarSesion/">Iniciar Sesión</a> |<a href="/crearUsuario/">Registrarse</a> </p>
+		</div>
+		<!-- Busqueda -->
+		<div id="search">
+			<h3>Categorias</h3>
+				<select>
+				  <option value="volvo">Categorias</option>
+				  <option value="saab">Trabajo</option>
+				  <option value="opel">Deporte</option>
+				  <option value="audi">Estudio</option>
+				</select>
 		</div>
 </div>
 
