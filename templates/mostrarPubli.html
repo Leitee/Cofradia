@@ -39,12 +39,12 @@
 </div>
 <!-- Login y registro-->
 <div>
-	<div id="tituloCategoria"><center><h1 style="font-family: sans-serif;">TIPO DE CATEGORIA</h1></center></div>
-	
+	<div id="tituloCategoria"><center><h1 style="font-family: sans-serif;">{{texto}}</h1></center></div>
+	<br>
  	<form action="/search/" method="get">
  	
         <ul>
-        	{% for publi in result %}
+        	{% for publi in publis %}
         	<div class="two">
         		<center><h1 class="tituloDescription">{{ publi.nombre|escape }}</h1></center>
         		{{ publi.descripcion|escape }}

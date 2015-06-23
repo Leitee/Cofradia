@@ -1,8 +1,8 @@
 from django.db import models
 
 class Categoria(models.Model):
-	nombreCategoria = models.CharField(max_length= 50)
-	descripcionCategoria = models.CharField(max_length= 200)
+	nombre = models.CharField(max_length= 50)
+	descripcion = models.CharField(max_length= 200)
 
 class Usuario(models.Model):
 	nombre = models.CharField(max_length=50, null = False)
@@ -15,8 +15,8 @@ class Usuario(models.Model):
 	telefono = models.CharField(max_length = 20)
 
 class Publicacion(models.Model):
-	nombrePublicacion = models.CharField(max_length=100)
-	fechaPublicacion = models.DateField()
+	nombre = models.CharField(max_length=100)
+	fechaInicio = models.DateField()
 	fechaCierre = models.DateField()
 	usuario = models.ForeignKey(Usuario)
 	categoria = models.ForeignKey(Categoria)

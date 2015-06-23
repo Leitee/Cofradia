@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse 
+
 from models import Usuario, Categoria, Publicacion
+
 
 def index(request):
 	return render(request,'index.html',{'result':'','logueado':False})
@@ -32,15 +34,13 @@ def nuevoUSuario(request):
 		else:
 			return render(request, 'crearUsuario.html',{'userValido':False,'pas':True})
 
-def mostrarPubli(request):
-	return render(request,'mostrarPubli.html')
-
-#def nuevaPubli(request):
-	#nuevaPubli = Publicacion(nombre=request.GET['nombre'],fechaInicio=datetime.datetime.now(),Categoria(nombre= request.GET['nombreUsu'], descripcion= request.GET['descripCat'], descripcion= request.GET['descripcion']))
+def obtenerCategoria(n):
+	return Categoria.objects.filter(nombre = n)
 
 def mostrarPubli(request):
-	result = Publicacion.objects.distinct()
-	return render(request,'mostrarPubli.html',{"result":result})
+	request.session["texto"] = "Deportes"
+	publis = {"publis" : Publicacion.objects.distinct()}
+	return render(request,'mostrarPubli.html', publis)
 
 def verPerfil(request):
 	return HttpResponse('Pantalla de administracion de datos de usuario')
