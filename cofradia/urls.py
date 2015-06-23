@@ -23,4 +23,5 @@ urlpatterns = [
 	url(r'^crearUsuario/',crearUsuario),
     url(r'^mostrarPubli/',mostrarPubli),
     url(r'^nuevoUSuario/',nuevoUSuario),
+    url(r'^verPerfil/',verPerfil),
 ]

@@ -32,7 +32,7 @@
 		</div>
 		<!-- Login y registro-->
 		<div>
-			<p id="titulocategory"> <a href="/iniciarSesion/">Iniciar Sesión</a> |<a href="/crearUsuario/">Registrarse</a> </p>
+			<p id="titulocategory"> <a href="/iniciarSesion/">Iniciar Sesión</a>
 		</div>
 </div>
 
@@ -63,6 +63,9 @@
 		Contrasena:<br>
 		<input type="password" name="pass1"><br>
 		Confirmar Contrasena:<br>
+			{% if pas %} 
+		   		<p style="color:red;">Contraseñas no coinciden</p> 
+			{% endif %}  
 		<input type="password" name="pass2"><br>
 		Telefono:<br>
 		<input type="text" name="unTel"><br><br>

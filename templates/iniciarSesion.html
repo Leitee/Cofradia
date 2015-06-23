@@ -18,7 +18,7 @@
 		<div class="contenedor">
 			<img src="{% static 'img/cofradia.png' %}" />
 			<center>
-				<form action="/buscarUsuario/" method="GET">
+				<form action="/buscarUsuario/" method="POST">{% csrf_token %}
 					<h2>Usuario:</h2> 
 					{% if userValido %} 
             		<p style="color:red;">Usuario Incorrecto</p> 

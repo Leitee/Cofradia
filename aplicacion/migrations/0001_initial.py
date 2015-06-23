@@ -55,6 +55,7 @@ class Migration(migrations.Migration):
                 ('sexo', models.BooleanField()),
                 ('email', models.EmailField(max_length=75)),
                 ('telefono', models.CharField(max_length=20)),
+                ('imagen', models.ImageField(upload_to=b'')),
             ],
         ),
         migrations.AddField(

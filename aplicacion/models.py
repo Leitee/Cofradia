@@ -13,6 +13,7 @@ class Usuario(models.Model):
 	sexo = models.BooleanField()
 	email = models.EmailField(max_length = 75)
 	telefono = models.CharField(max_length = 20)
+	imagen = models.ImageField()
 
 class Publicacion(models.Model):
 	nombrePublicacion = models.CharField(max_length=100)
